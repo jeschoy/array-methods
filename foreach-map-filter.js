@@ -7,8 +7,13 @@ Examples:
 
 */
 function doubleValues(arr){
-    
+  let newArr = [];
+  arr.forEach(function(num) {
+    newArr.push(num * 2);
+  });
+  return newArr;
 }
+
 
 /*
 Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function
