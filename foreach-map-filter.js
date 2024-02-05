@@ -24,7 +24,13 @@ Examples:
 
 */
 function onlyEvenValues(arr){
-    
+    let newArr = [];
+    arr.forEach(function(num) {
+      if (num % 2 === 0) {
+        newArr.push(num);
+      }
+    })
+    return newArr;
 }
 
 /*
@@ -36,7 +42,11 @@ Examples:
 
 */
 function showFirstAndLast(arr){
-    
+    let newArr = [];
+    arr.forEach(function(name) {
+      newArr.push(name[0] + name[name.length - 1]);
+    })
+    return newArr;
 }
 
 /*
