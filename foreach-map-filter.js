@@ -6,7 +6,7 @@ Examples:
     doubleValues([5,1,2,3,10]) // [10,2,4,6,20]
 
 */
-function doubleValues(arr){
+function doubleValues(arr) {
   let newArr = [];
   arr.forEach(function(num) {
     newArr.push(num * 2);
@@ -59,7 +59,10 @@ Examples:
 
 */
 function addKeyAndValue(arr,key,value){
-    
+    arr.forEach(function(name) {
+      name[key] = value;
+    });
+    return arr;
 }
 
 /*
@@ -73,7 +76,20 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-   
+  let obj = {};
+  let lettersArr = str.split('');
+  const vowels = 'aeiou';
+  lettersArr.forEach(function(letter) {
+    let lowerCase = letter.toLowerCase();
+    if (vowels.indexOf(lowerCase) !== -1) {
+      if (obj[lowerCase]) {
+        obj[lowerCase]++;
+      } else {
+        obj[lowerCase] = 1;
+      }
+    }
+  })
+  return obj;
 }
 
 /*
