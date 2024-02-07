@@ -128,7 +128,9 @@ Examples:
 */
 
 function extractKey(arr, key){
-    
+    return arr.map(function(name) {
+      return name[key];
+    })
 }
 
 /*
@@ -139,7 +141,9 @@ Examples:
 */
 
 function extractFullName(arr){
-    
+    return arr.map(function(name) {
+      return `${name.first} ${name.last}`;
+    })
 }
 
 /*
